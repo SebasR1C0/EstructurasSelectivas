@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+   char a;
+   int b;
+    cout << "Ingrese el sexo de la persona (F o M)" << endl;
+    cin >> a;
+    a = toupper(a);
+    cout << "Ingrese la edad de la persona" << endl;
+    cin >> b;
+    if (a == 'F' || a == 'M') {
+        if (b >= 0 ) {
+            if (a == 'F') {
+                int c;
+                c = (220 - b) / 10;
+                cout << "El numero debe ser de " << c << " pulsaciones por cada 10 segundos aproximadamente" << endl;
+            }
+            else {
+                int d;
+                d = (210 - b) / 10;
+                cout << "El numero debe ser de " << d << " pulsaciones por cada 10 segundos aproximadamente" << endl;
+            }
+        }
+        else {
+            cout << "Edad incorrecta" << endl;
+        }
+    }
+    else {
+        cout << "Sexo incorrecto" << endl;
+    }
+    return 0;
+}
