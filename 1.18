@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int a;
+   cout << "Ingrese la posicion del equipo en la tabla:" << endl;
+   cin >> a;
+   if (a > 0 && a < 11) {
+       if (a < 6) {
+           if (a == 5) {
+               cout << "El eequipo seleccionado irá al repechaje" << endl;
+           }
+           else {
+               cout << "El eequipo seleccionado irá al mundial" << endl;
+           }
+
+       }
+       else {
+           cout << "Cómprate una TV LED para ver el mundia!!" << endl;
+       }
+   }
+   else {
+       cout << "Numero incorrecto" << endl;
+   }
+    return 0;
+}
