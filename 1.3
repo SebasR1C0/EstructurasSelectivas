@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+   double a;
+    cout << "Ingrese la nota final del curso:" << endl;
+    cin >> a;
+    if (a >= 0 && a <= 20) {
+        if (a < 12.5) {
+            cout << "Desaprobado" << endl;
+        }
+        else {
+            cout << "Aprobado" << endl;
+        }
+    }
+    return 0;
+}
