@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+double com(int a) {
+    if (a >= 100) {
+        double b = a - 100;
+        return 75.00 + b * 0.9;
+    }
+    else {
+        return a * 0.75;
+    }
+}
+double res(int a) {
+    if (a >= 100) {
+        double b = a - 100;
+        return 30.00 + b * 0.7;
+    }
+    else {
+        return a * 0.30;
+    }
+}
+int main() {
+   int a;
+   double b;
+   cout << "Ingrese la zona:" << endl;
+   cin >> a;
+   cout << "Ingrese el numero de kilowatt:" << endl;
+   cin >> b;
+   if (a == 1 || a == 2) {
+       if (b >= 0) {
+           if (a == 2) {
+               cout << "El monto a pagar es: " << res(b)+25.00 << endl;
+           }
+           else {
+               cout << "El monto a pagar es: "<< com(b)+50.00 << endl;
+           }
+       }
+       else {
+           cout << "Numero incorrecto" << endl;
+       }
+   }
+
+   else {
+       cout << "Numero incorrecto" << endl;
+   }
+    return 0;
+}
