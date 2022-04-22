@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a,b,c,d,e;
+    cout << "Ingresa tu dia de nacimiento:" << endl;
+    cin >> a;
+    cout << "Ingresa tu mes de nacimiento:" << endl;
+    cin >> b;
+    cout << "Ingresa tu anio de nacimiento:" << endl;
+    cin >> c;
+    d = c % 2;
+    e = a % 2;
+    cout << "Tu color es: ";
+    if (d == 0) {
+        if (e == 0) {
+            switch ((b - 1) / 3) {
+            case 0: cout << "Rojo" << endl;
+                break;
+            case 1: cout << "Naranja" << endl;
+                break;
+            case 2: cout << "Marron" << endl;
+                break;
+            case 3: cout << "Violeta" << endl;
+                break;
+            }
+        }
+        else {
+            switch ((b - 1) / 3) {
+            case 0: cout << "Celeste" << endl;
+                break;
+            case 1: cout << "Verde" << endl;
+                break;
+            case 2: cout << "Fucsia" << endl;
+                break;
+            case 3: cout << "Rosado" << endl;
+                break;
+            }
+        }
+    }
+    else {
+        if (e == 0) {
+            switch ((b - 1) / 3)  {
+            case 0: cout << "Morado" << endl;
+                break;
+            case 1: cout << "Turquesa" << endl;
+                break;
+            case 2: cout << "Azul" << endl;
+                break;
+            case 3: cout << "Olivo" << endl;
+                break;
+            }
+        }
+        else {
+            switch ((b-1)/3)  {
+            case 0: cout << "Negro" << endl;
+                break;
+            case 1: cout << "Gris" << endl;
+                break;
+            case 2: cout << "Amarillo" << endl;
+                break;
+            case 3: cout << "Blanco" << endl;
+                break;
+            }
+        }
+    }
+    return 0;
+ }
