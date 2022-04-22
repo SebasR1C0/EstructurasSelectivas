@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    cout << "Ingrese la edad del espectador:" << endl;
+    cin >> a;
+    if (a >= 5) {
+        if (a >= 5 && a <= 14) {
+            cout << "Entra de tipo 1 y el costo es " << 15 * 0.65 << endl;
+        }
+        if (a >= 15 && a <= 19) {
+            cout << "Entra de tipo 2 y el costo es : " << 15 * 0.75 << endl;
+        }
+        if (a >= 20 && a <= 45) {
+            cout << "Entra de tipo 3 y el costo es : " << 15 * 0.90 << endl;
+        }
+        if (a >= 46 && a <= 65) {
+            cout << "Entra de tipo 4 y el costo es : " << 15 * 0.78 << endl;
+        }
+        if (a >= 66) {
+            cout << "Entra de tipo 5 y el costo es : " << 15 * 0.50 << endl;
+        }
+    }
+        else {
+            cout << "No puede ingresar" << endl;
+        }
+    return 0;
+ }
