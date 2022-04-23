@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a, b,c;
+	double pi1;
+	cout << "1. Area de un Triangulo " << endl;
+	cout << "2. Area de un Rectangulo " << endl;
+	cout << "3. Area de un Circulo " << endl;
+	cout << "4. Area de un Cuadrado " << endl;
+	cout << "5.Salir " << endl;
+	cout << "Que opcion desea? (Escriba el numero) " << endl;
+	cin >> a;
+	switch (a) {
+	case 1:cout << "Indique la altura y la base del triangulo" << endl;
+		cin >> c;
+		cin >> b;
+		cout << "El area del triangulo es: " << c * b / 2 << endl;
+		break;
+	case 2:cout << "Indique los lados del rectangulo" << endl;
+		cin >> c;
+		cin >> b;
+		cout << "El area del rectangulo es: " << c * b << endl;;
+		break;
+	case 3: cout << "Indique el radio del circulo" << endl;
+		cin >> c;
+		cout << "El area del rectangulo es: " << c * c * 3.1415 << endl;;
+		break;;
+		break;
+	case 4: cout << "Indique el lado del cuadrado" << endl;
+		cin >> c;
+		cout << "El area del cuadrado es: " << c * c << endl;;
+		break;;
+		break;
+	case 5:cout << "Salida exitosa"<<endl;
+		break;
+	default: cout << "Numero incorrecto" << endl;
+	}
+	return 0;
+}
