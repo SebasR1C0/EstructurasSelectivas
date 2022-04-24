@@ -1,0 +1,36 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main() {
+	int a,c,d,u;
+	cout << "Inserte su numero de 3 cifras " << endl;
+	cin >> a;
+	u = a % 10;
+	c = a / 10;
+	d = c % 10;
+	c /= 10;
+	if (a <= 999 && a >= 100) {
+		switch (c) {
+		case 1:case 2:case 3: cout << "X"; break;
+		case 4:case 5:case 6: cout << "Y"; break;
+		case 7:case 8:case 9: cout << "Z"; break;
+		default: cout << "#";
+		}
+		switch (d) {
+		case 1:case 2:case 3: cout << "L"; break;
+		case 4:case 5:case 6: cout << "W"; break;
+		case 7:case 8:case 9: cout << "P"; break;
+		default: cout << "&";
+		}
+		switch (c) {
+		case 1:case 2:case 3: cout << "Q"; break;
+		case 4:case 5:case 6: cout << "W"; break;
+		case 7:case 8:case 9: cout << "M"; break;
+		default: char(64);
+		}
+	}
+	else {
+		cout << "Numero incorrecto" << endl;
+	}
+	return 0;
+}
