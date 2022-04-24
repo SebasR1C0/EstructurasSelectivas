@@ -1,0 +1,73 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int po(char a) {
+	if (a == 'A') {
+		int aa = 1200;
+		return aa;
+	}
+	else {
+		int aa = 950;
+		return aa;
+	}
+}
+int alc(char a) {
+	if (a == 'S') {
+		int al = 10;
+		return al;
+	}
+	else {
+		int al = 0;
+		return al;
+	}
+}
+int len(char a) {
+	if (a == 'S') {
+		int le = 5;
+		return le;
+	}
+	else {
+		int le = 0;
+		return le;
+	}
+}
+int en(char a) {
+	if (a == 'S') {
+		int en = 5;
+		return en;
+	}
+	else {
+		int en = 0;
+		return en;
+	}
+}
+int ed(char a) {
+	if (a > 40) {
+		int ed = 20;
+		return ed;
+	}
+	else {
+		int ed = 10;
+		return ed;
+	}
+}
+int main() {
+	char a,b,c,d;
+	int e;
+	cout << "Cobertura Ampliada (A) o danios a terceros (B): " << endl;
+	cin >> a;
+	a = toupper(a);
+	cout << "Tiene por habitos beber alcohol (S:si; N:no): " << endl;
+	cin >> b;
+	b = toupper(b);
+	cout << "Usa lentes (S:si; N:no): " << endl;
+	cin >> c;
+	c = toupper(c);
+	cout << "Padece algunas enfermedad (S:si; N:no): " << endl;
+	cin >> d;
+	d = toupper(d);
+	cout << "Edad: " << endl;
+	cin >> e;
+	cout << "Costo de la poliza: " << po(a) * (100 + alc(b) + len(c) + en(d) + ed(e))/100 << endl;
+	return 0;
+}
