@@ -1,0 +1,67 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+char mon(double mc, double mf) {
+	if (mc == mf) {
+		return 'I';
+	}
+	else
+		if (mc < mf) {
+			return 'F';
+		}
+		else {
+			return 'C';
+		}
+}
+int main() {
+	long long a,b, M,H,P,MM,HH,PP;
+	cout << "Inserte su codigo de 16 cifras " << endl;
+	cin >> b;
+	M = b % 100;
+	a = b / 100;
+	H = a % 100;
+	a /= 100;
+	P = a % 10000;
+	a /= 10000;
+	MM = a % 100;
+	a /= 100;
+	HH = a % 100;
+	a /= 100;
+	PP = a % 10000;
+	if (b >= 1000000000000000 && b < 100000000000000000) {
+		if (PP== 6769 || PP ==7073) {
+			if (M <= 60 && MM <= 60) {
+				if (PP == 6769) {
+					double mc = 0.35 * MM + 21 * HH;
+					double mf = 0.15 * M + 9 * H;
+					cout << "Cantidad de horas a Fijo: "<<H << endl;
+					cout << "Cantidad de minutos a Fijo: "<<M << endl;
+					cout << "Cantidad de horas a Celular: " << HH << endl;
+					cout << "Cantidad de minutos a Celular: " << MM << endl;
+					cout << "Monto a pagar por el consumo: "<< mc+mf << endl;
+					cout << "El gasto mayor al realizar las llamadas es(F:fijo; C:celular; I:igual): "<< mon(mc, mf) << endl;
+				}
+				else {
+					double mc = 0.35 * M + 21 * H;
+					double mf = 0.15 * MM + 9 * HH;
+					cout << "Cantidad de horas a Fijo: " << HH << endl;
+					cout << "Cantidad de minutos a Fijo: " << MM << endl;
+					cout << "Cantidad de horas a Celular: " << H << endl;
+					cout << "Cantidad de minutos a Celular: " << M << endl;
+					cout << "Monto a pagar por el consumo: " << mc + mf << endl;
+					cout << "El gasto mayor al realizar las llamadas es(F:fijo; C:celular; I:igual): " << mon(mc, mf) << endl;
+				}
+			}
+			else {
+				cout << "Minutos incorrecto" << endl;
+			}
+		}
+		else {
+			cout << "Codigo ASCII incorrecto" << endl;
+		}
+	}
+	else {
+		cout << "Numero equivocado" << endl;
+	}
+	return 0;
+}
