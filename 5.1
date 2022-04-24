@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main() {
+	int a;
+	cout << "El numero de horas que se ha quedado en el estacionamiento " << endl;
+	cin >> a;
+	cout << "El monto a pagar es: ";
+	if (a <= 2 ) {
+		cout << a * 5 << endl;
+	}
+	if (a>2 && a <= 5) {
+		a = a - 2;
+		cout << 10 + a * 4 << endl;
+	}
+	if (a > 5 && a <= 10) {
+		a = a - 5;
+		cout << 22 + a * 3 << endl;
+	}
+	if (a > 10) {
+		a = a - 10;
+		cout << 37 + a * 2 << endl;
+	}
+	return 0;
+}
