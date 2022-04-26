@@ -1,0 +1,106 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main() {
+	int a, b;
+	cout << "Ingresa el mes: " << endl;
+	cin >> a;
+	cout << "Ingresa el dia: " << endl;
+	cin >> b;
+	if (a > 0 && a <= 12) {
+		if (b > 0 && b <= 31) {
+			switch (b) {
+			case 1: if (a <= 21) {
+				cout << "Acuario" << endl;
+			}
+				  else {
+				cout << "Capricornio" << endl;
+			}
+				  break;
+			case 2: if (a <= 20) {
+				cout << "Piscis" << endl;
+			}
+				  else {
+				cout << "Acuario" << endl;
+			}
+				  break;
+			case 3: if (a <= 21) {
+				cout << "Aries" << endl;
+			}
+				  else {
+				cout << "Piscis" << endl;
+			}
+				  break;
+			case 4: if (a <= 21) {
+				cout << "Tauro" << endl;
+			}
+				  else {
+				cout << "Aries" << endl;
+			}
+				  break;
+			case 5: if (a <= 22) {
+				cout << "Geminis" << endl;
+			}
+				  else {
+				cout << "Tauro" << endl;
+			}
+				  break;
+			case 6: if (a <= 21) {
+				cout << "Cancer" << endl;
+			}
+				  else {
+				cout << "Geminis" << endl;
+			}
+				  break;
+			case 7: if (a <= 24) {
+				cout << "Leo" << endl;
+			}
+				  else {
+				cout << "Cancer" << endl;
+			}
+				  break;
+			case 8: if (a <= 24) {
+				cout << "Virgo" << endl;
+			}
+				  else {
+				cout << "Leo" << endl;
+			}
+				  break;
+			case 9: if (a <= 24) {
+				cout << "Libra" << endl;
+			}
+				  else {
+				cout << "Virgo" << endl;
+			}
+				  break;
+			case 10: if (a <= 24) {
+				cout << "Escorpio" << endl;
+			}
+				  else {
+				cout << "Libra" << endl;
+			}
+				  break;
+			case 11: if (a <= 23) {
+				cout << "Sagitario" << endl;
+			}
+				  else {
+				cout << "Escorpio" << endl;
+			}
+				  break;
+			case 12: if (a <= 22) {
+				cout << "Capricornio" << endl;
+			}
+				  else {
+				cout << "Sagitario" << endl;
+			}
+			}
+		}
+		else {
+			cout << "Numero incorrecto" << endl;
+		}
+	}
+	else {
+		cout << "Numero incorrecto" << endl;
+	}
+	return 0;
+}
